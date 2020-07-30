@@ -18,4 +18,4 @@ jobs:
       
       - run: echo "${{ toJson(github.event.inputs.event) }}"
         
-      - run: echo "${{ toJson(github.event.inputs.event).action }}"
+      - run: echo "${{ toJson(github.event.inputs.event) }}.action"
