@@ -16,4 +16,6 @@ jobs:
     steps:
       - run: echo "${{ toJson(github.event.action) }}"
       
+      - run: echo "${{ toJson(github.event.inputs.event) }}"
+        
       - run: echo "${{ toJson(github.event.inputs.event).action }}"
