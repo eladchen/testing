@@ -1,10 +1,19 @@
 name: Pull Request
 
-on: [pull_request]
-
+on: 
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      event:
+        description: 'Pull-Request Event Payload'
+        required: true
+        default: '{}'
+    
 jobs:
   pull_request:
+    runs-on: ubuntu-latest
+    
     steps:
-      - run: echo "${{ toJson(github.event.action )} }"
+      - run: echo "${{ toJson(github.event.action) }}"
       
-      - run: echo "${{ toJson(github.event )} }"
+      - run: echo "${{ toJson(github.event.inputs.event).action }}"
