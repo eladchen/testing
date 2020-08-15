@@ -14,8 +14,12 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - run: echo "${{ toJson(github.event.action) }}"
-      
-      - run: echo ${{ toJson(github.event.inputs.event) }} | jq .
+      # - run: echo ${{ toJson(github.event.inputs.event) }} | jq .
         
-      - run: echo "${{ fromJson(github.event.inputs.event).action }}"
+      # - run: echo "${{ fromJson(github.event.inputs.event).action }}"
+      
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          repository: ${{ fromJson(github.event.inputs.event).pull_request.head.repo.full_name }}
+          ref: ${{ fromJson(github.event.inputs.event).pull_request.head.ref }}
