@@ -14,8 +14,10 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - run: echo ${{ toJson(github.event.inputs.event) }} | jq .
+      - name: event
+        run: echo ${{ toJson(github.event.inputs.event) }} | jq .
         
+      - name: event pull request 
       - run: echo ${{ fromJson(github.event.inputs.event).pull_request }} | jq .
       
 #       - name: Checkout
