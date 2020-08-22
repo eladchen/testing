@@ -13,6 +13,9 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+      - name: "Ben"
+        uses: eladchen/commit-status
+        
       - name: event
         run: echo ${{ toJson(github.event.inputs.event) }} | jq .
         
@@ -20,7 +23,7 @@ jobs:
         run: |
           echo "${{ fromJson(github.event.inputs.event).pull_request.head.repo.full_name }}"
           echo "${{ fromJson(github.event.inputs.event).pull_request.head.ref }}"
-      
+          
       - name: Checkout
         uses: actions/checkout@v2
         with:
