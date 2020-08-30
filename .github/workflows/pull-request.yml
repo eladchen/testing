@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       event:
-        description: 'Pull-Request Event Payload test'
+        description: 'Pull-Request Event Payload'
         required: true
         default: '{}'
     
