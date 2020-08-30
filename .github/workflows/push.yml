@@ -1,3 +1,5 @@
+name: some workflow
+
 on: 
   push:
   
