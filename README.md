@@ -1,2 +1,2 @@
 # README.md
-Kiss my shiny metal ass
+Kiss my shiny metal :)
