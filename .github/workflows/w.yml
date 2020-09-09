@@ -2,6 +2,8 @@ name: some workflow
 
 on: 
   push:
+  pull_request:
+  pull_request_target:  
   
 jobs:
   job:
