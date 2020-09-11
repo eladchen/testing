@@ -1,2 +1,2 @@
 # README.md
-Kiss my shiny a :)
+Good new everyone
