@@ -17,12 +17,12 @@ events:
       trustCollaborators: true
       trustedOrgTeams: []
       trustedUserNames: []
-      paths: ["!.github/*", "!package.json", "!package-lock.json"]
+      paths: ["!.github/**", "!package.json", "!package-lock.json"]
 
     - trustOrgMembers: false
       trustCollaborators: false
       trustedOrgTeams: []
       trustedUserNames: ["eladchen"]
-      paths: [".github/*"]
+      paths: [".github/**"]
       
   pull_request_target: *push
