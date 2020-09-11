@@ -10,7 +10,7 @@ events:
       trustCollaborators: true
       trustedOrgTeams: []
       trustedUserNames: []
-      paths: ["!.github/*", "!package.json", "!package-lock.json"]
+      paths: ["!.github/**", "!package.json", "!package-lock.json"]
 
   pull_request:
     - trustOrgMembers: true
