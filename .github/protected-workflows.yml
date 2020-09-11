@@ -13,6 +13,12 @@ events:
       paths: ["!.github/*", "!package.json", "!package-lock.json"]
 
   pull_request:
+    - trustOrgMembers: true
+      trustCollaborators: true
+      trustedOrgTeams: []
+      trustedUserNames: []
+      paths: ["!.github/*", "!package.json", "!package-lock.json"]
+
     - trustOrgMembers: false
       trustCollaborators: false
       trustedOrgTeams: []
