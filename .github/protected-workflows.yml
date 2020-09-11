@@ -1,0 +1,22 @@
+anyEvent:
+  trustOrgMembers: false
+  trustCollaborators: false
+  trustedOrgTeams: []
+  trustedUserNames: []
+
+events:
+  push: &push
+    - trustOrgMembers: true
+      trustCollaborators: true
+      trustedOrgTeams: []
+      trustedUserNames: []
+      paths: [!.github/*, !package.json, !package-lock.json]
+
+  pull_request:
+    - trustOrgMembers: false
+      trustCollaborators: false
+      trustedOrgTeams: []
+      trustedUserNames: [eladchen]
+      paths: [.github/*]
+      
+  pull_request_target: *push
