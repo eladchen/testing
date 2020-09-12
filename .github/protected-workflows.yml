@@ -1,10 +1,13 @@
 anyEvent:
-  trustOrgMembers: false
-  trustCollaborators: false
-  trustedOrgTeams: []
-  trustedUserNames: []
+  trustOrgMembers: true
+  trustCollaborators: true
 
 events:
+  push:
+    - trustAnyone: true
+      paths:
+        disallowed: [".github/**", "package.json", "package-lock.json", "README.md"]
+
   pull_request: &pull_request
       # allow workflow runs, as long as certain paths are not changed.
     - trustAnyone: true
@@ -15,5 +18,5 @@ events:
     - trustedUserNames: ["eladchen"]
       paths: 
         allowed: [".github/**", "package.json", "package-lock.json"]
-      
+
   pull_request_target: *pull_request
