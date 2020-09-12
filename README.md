@@ -1,2 +1,2 @@
 # README.md
-Kiss my shiny metal ass
+Good news everyone...
