@@ -1,3 +1,4 @@
 eventWorkflow:
   pull_request:
    - pull-request.yml
+   - pull-request.yml
