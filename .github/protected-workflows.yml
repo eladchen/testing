@@ -14,9 +14,7 @@ events:
       paths:
         disallowed: [".github/**", "package.json", "package-lock.json"]
         
-    - trustedUserNames: ["abstracter-bot"]
-      paths:
-        allowed: [".github/**"]        
+    - trustedUserNames: ["abstracter-bot"]        
       
       # allow workflow runs with certain paths changes by a specific user name.
     - trustedUserNames: ["eladchen"]
