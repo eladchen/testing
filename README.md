@@ -1,2 +1,2 @@
 # README.md
-Kiss my shiny metal ass
+Bender: Kiss my shiny metal a...
